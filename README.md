@@ -1,6 +1,6 @@
 # Activities Bot
 
-DjDeveloperr tarafından yapılmış Türkçe bir aktivite botu. [Harmony](https://github.com/harmonyland/harmony) ve [Deno Deploy](https://deno.com/deploy) ile yapıldı.
+DjDeveloperr tarafından yapılmış ve benim tarafımdan çevrilmiş Türkçe bir aktivite botu. [Harmony](https://github.com/harmonyland/harmony) ve [Deno Deploy](https://deno.com/deploy) ile yapıldı.
 
 ## Davet
 
