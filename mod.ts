@@ -32,23 +32,23 @@ slash.commands.all().then((e) => {
   if (e.size !== 2) {
     slash.commands.bulkEdit([
       {
-        name: "invite",
-        description: "Invite me to your server.",
+        name: "davet",
+        description: "Beni sunucuya davet edin.",
       },
       {
-        name: "activity",
-        description: "Start an Activity in a Voice Channel.",
+        name: "aktivite",
+        description: "Bir ses kanalında aktivite olayı çağırın.",
         options: [
           {
             name: "channel",
             type: slash.SlashCommandOptionType.CHANNEL,
-            description: "Voice Channel to start activity in.",
+            description: "Aktivite olayı çağrılacak ses kanalı.",
             required: true,
           },
           {
-            name: "activity",
+            name: "aktivite",
             type: slash.SlashCommandOptionType.STRING,
-            description: "Activity to start.",
+            description: "Çağrılacak aktivite.",
             required: true,
             choices: Object.entries(ACTIVITIES).map((e) => ({
               name: e[1].name,
@@ -66,10 +66,10 @@ slash.handle("activity", (d) => {
   const channel = d.option<slash.InteractionChannel>("channel");
   const activity = ACTIVITIES[d.option<string>("activity")];
   if (!channel || !activity) {
-    return d.reply("Invalid interaction.", { ephemeral: true });
+    return d.reply("Geçersiz parametre.", { ephemeral: true });
   }
   if (channel.type !== slash.ChannelTypes.GUILD_VOICE) {
-    return d.reply("Activities can only be started in Voice Channels.", {
+    return d.reply("Aktiviteler sadece ses kanallarında çağrılabilir.", {
       ephemeral: true,
     });
   }
@@ -84,23 +84,22 @@ slash.handle("activity", (d) => {
     })
     .then((inv) => {
       d.reply(
-        `[Click here to start ${activity.name} in ${channel.name}.](<https://discord.gg/${inv.code}>)`
+        `[ ${activity.name} aktivitesini ${channel.name} kanalında çağırmak için tıklayın.](<https://discord.gg/${inv.code}>)`
       );
     })
     .catch((e) => {
       console.log("Failed", e);
-      d.reply("Failed to start Activity.", { ephemeral: true });
+      d.reply("Aktivite çağrılamadı. İletişim için Kegrine.#3852.", { ephemeral: true });
     });
 });
 
 slash.handle("invite", (d) => {
   d.reply(
-    `• [Click here to invite.](<https://discord.com/api/oauth2/authorize?client_id=819835984388030464&permissions=1&scope=applications.commands%20bot>)\n` +
-      `• [Check out Source Code.](<https://github.com/DjDeveloperr/ActivitiesBot>)\n` +
-      `• [Join our Discord.](<https://discord.gg/WVN2JF2FRv>)`,
+    `• [Buraya tıklayarak davet edin.](<https://discord.com/api/oauth2/authorize?client_id=831507163972370432&permissions=1&scope=applications.commands%20bot>)\n` +
+      `• [Site'ye gidin.](<http://leona.matsurari.tech>)`,
     { ephemeral: true }
   );
 });
 
-slash.handle("*", (d) => d.reply("Unhandled Command", { ephemeral: true }));
+slash.handle("*", (d) => d.reply("Çağrılamayan komut.", { ephemeral: true }));
 slash.client.on("interactionError", console.log);
