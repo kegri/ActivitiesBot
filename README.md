@@ -1,18 +1,18 @@
 # Activities Bot
 
-Discord Slash Commands bot to launch Voice Channel Activities. Made with [Harmony](https://github.com/harmonyland/harmony) and [Deno Deploy](https://deno.com/deploy).
+DjDeveloperr tarafından yapılmış Türkçe bir aktivite botu. [Harmony](https://github.com/harmonyland/harmony) ve [Deno Deploy](https://deno.com/deploy) ile yapıldı.
 
-## Invite
+## Davet
 
-You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=831507163972370432&permissions=1&scope=applications.commands%20bot). And you can join [Harmony Discord](https://discord.gg/WVN2JF2FRv) if you need any help!
+Orijinal robotu [buradan](https://discord.com/api/oauth2/authorize?client_id=831507163972370432&permissions=1&scope=applications.commands%20bot) davet edebilirsiniz. Ve sizde destek için [Harmony Discord](https://discord.gg/WVN2JF2FRv) sunucusuna girebilirsiniz.
 
-## Deployment
+## Kurulum
 
-This bot is deployed to [Deno Deploy](https://deno.com/deploy). You can also deploy it yourself in few clicks!
+Bu bot [Deno Deploy](https://deno.com/deploy)'a gönderilmiştir. Sizde kendinizinkini kolayca burada yönetebilirsiniz.
 
-- [Click here to Deploy this Repository.](https://dash.deno.com/new?url=https://raw.githubusercontent.com/kegri/ActivitiesBot/main/mod.ts&env=TOKEN,PUBLIC_KEY) and add your bot's token (Bot -> Copy Token) and public key (General -> Copy Public Key), available on [Discord Developer Portal](https://discord.dev).
-- Add the project's domain to Interactions Endpoint URL in Dev Portal.
-- Invite the bot from URL `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID_HERE&permissions=1&scope=bot%20applications.commands` and don't forget to replace `YOUR_CLIENT_ID_HERE` with your bot's application ID!
+- [Buraya tıklayarak deploy edin](https://dash.deno.com/new?url=https://raw.githubusercontent.com/kegri/ActivitiesBot/main/mod.ts&env=TOKEN,PUBLIC_KEY) ve robotunuzun tokenini ve anahtarını girin, bu bilgiler [Discord Developer Portal](https://discord.dev) üzerinde mevcut.
+- Projenin alan adını Discord Dev Portal ortamında Interactions Endpoint URL yerine yapıştırın.
+- Botunuzu `https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID_HERE&permissions=1&scope=bot%20applications.commands` bu urlden davet edin ve `YOUR_CLIENT_ID_HERE` kısmını kendi robotunuzun IDsi ile değiştirin!
 
 ## Legal
 
